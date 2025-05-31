@@ -22,7 +22,7 @@ public class MemberController {
     }
 
     @GetMapping("/{id}")
-    @Operation(summary = "Find a member By Id")
+    @Operation(summary = "Find member By Id")
     public Member findById(@PathVariable Long id) {
         return memberRepository.findById(id).orElse(null);
     }
